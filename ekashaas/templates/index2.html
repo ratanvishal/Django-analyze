@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Utilies</title>
+</head>
+<body> template hoon vishal bhai!
+{{name}} is from {{place}}
+<h1>Welcome to the analyzer. Enter your text below</h1>
+<form action="/analyze" method="post"> {% csrf_token %}
+    <textarea name="text" style="background: none !important; margin: 0px; transition:none; width: 721px; height: 93px; line-height: normal; font-family: Consolas; font-size: 13.33px; position: relative; z-index: auto; box-sizing: border-box; -ms-overflow-style: -ms-autohiding-scrollbar;" spellcheck="false" data-gramm="true" data-txt_gramm_id="641e1a52-7613-5249-a8e1-e05e931d8789" data-gramm_id="641e1a52-7613-5249-a8e1-e05e931d8789" data-gramm_editor="true"></textarea><br>
+    <input type="checkbox" name="removepunc"> RemovePunctuations<br>
+    <input type="checkbox" name="fullcaps"> Uppercase<br>
+    <input type="checkbox" name="smallcaps"> Lowercase<br>
+    <input type="checkbox" name="removenewline"> removenewline<br>
+    <input type="checkbox" name="spaceremover"> spaceremover<br>
+    <input type="checkbox" name="charcount"> charcount<br>
+    <button type="submit"> Analyze text </button>
+
+</form>
+
+</body>
+</html>

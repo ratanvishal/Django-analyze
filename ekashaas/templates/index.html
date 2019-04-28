@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="container">
+        <form action='/analyze' method='post'> {% csrf_token %}
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Enter your text here let Text Utils do the magic</label>
+    <textarea class="form-control" name="text" id="exampleFormControlTextarea1" rows="9"></textarea>
+  </div>
+
+
+  <div class="custom-control custom-switch">
+  <input type="checkbox" name="removepunc" class="custom-control-input" id="customSwitch1">
+  <label class="custom-control-label" for="customSwitch1">RemovePunctuations</label>
+  </div>
+      <div class="custom-control custom-switch">
+  <input type="checkbox" name="fullcaps" class="custom-control-input" id="customSwitch2">
+  <label class="custom-control-label" for="customSwitch2">Uppercase</label>
+  </div>
+      <div class="custom-control custom-switch">
+  <input type="checkbox" name="smallcaps" class="custom-control-input" id="customSwitch3">
+  <label class="custom-control-label" for="customSwitch3">Lowercase</label>
+  </div>
+      <div class="custom-control custom-switch">
+  <input type="checkbox" name="removenewline" class="custom-control-input" id="customSwitch4">
+  <label class="custom-control-label" for="customSwitch4">removenewline</label>
+  </div>
+      <div class="custom-control custom-switch">
+  <input type="checkbox" name="spaceremover" class="custom-control-input" id="customSwitch5">
+  <label class="custom-control-label" for="customSwitch5">spaceremover</label>
+  </div>
+      <div class="custom-control custom-switch">
+  <input type="checkbox" name="charcount" class="custom-control-input" id="customSwitch6">
+  <label class="custom-control-label" for="customSwitch6">charcount</label>
+  </div>
+      <button type="submit" class="btn btn-dark mt-2">Analyze text</button>
+</form >
+</div>
+{% endblock %}
